@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Случайный Прогноз</title>
+  {% load static %}  <!-- Загрузка библиотеки статических файлов -->
+  <link rel="stylesheet" href="{% static 'RandSite/style.css' %}">
+</head>
+<body>
+  <h1>Ваш случайный прогноз:</h1>
+  <div id="prediction">{{ prediction|safe  }}</div>
+  <button onclick="getNewPrediction()">Получить новый прогноз</button>
+  <script src="{% static 'RandSite/script.js' %}"></script>
+</body>
+</html>
